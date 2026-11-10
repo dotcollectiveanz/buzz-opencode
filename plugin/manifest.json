@@ -1,0 +1,18 @@
+{
+  "id": "opencode-harness",
+  "name": "OpenCode",
+  "apiVersion": 1,
+  "description": "Buzz agents that run on your local OpenCode, with any provider it supports. Each thread an agent is mentioned in is one continuing OpenCode session.",
+  "discovery": {
+    "category": "agents",
+    "tags": ["code", "coding-agents", "opencode"]
+  },
+  "host": {
+    "processes": [
+      { "id": "opencode", "program": "opencode", "args": ["acp"] },
+      { "id": "export", "program": "opencode", "args": ["session", "export"] }
+    ],
+    "mcp": true,
+    "files": true
+  }
+}
